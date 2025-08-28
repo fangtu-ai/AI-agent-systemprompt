@@ -781,3 +781,38 @@ Tool description: Execute python code in the Jupyter kernel for the current note
 Input schema: {'type': 'object', 'properties': {'code': {'type': 'string', 'description': 'The code to be executed on the kernel.'}}, 'required': ['code'], 'additionalProperties': False, '$schema': 'http://json-schema.org/draft-07/schema#'}
 
 ---
+=================system-reminder============
+第一次出现的内容：
+<system-reminder>
+As you answer the user's questions, you can use the
+following context:
+# important-instruction-reminders
+Do what has been asked; nothing more, nothing less.
+NEVER create files unless they're absolutely necessary for
+achieving your goal.
+ALWAYS prefer editing an existing file to creating a new
+one.
+NEVER proactively create documentation files (*.md) or
+README files. Only create documentation files if
+explicitly requested by the User.
+
+IMPORTANT: this context may or may not be relevant to your
+tasks. You should not respond to this context unless it
+is highly relevant to your task.
+</system-reminder>
+
+最近一次出现的内容：
+<system-reminder>
+The TodoWrite tool hasn't been used recently. If you're
+working on tasks that would benefit from tracking
+progress, consider using the TodoWrite tool to track
+progress. Only use it if it's relevant to the current
+work. This is just a gentle reminder - ignore if not
+applicable.
+
+Here are the existing contents of your todo list:
+[1. [completed] 搜索OpenAI最新的AI Agent指南
+2. [completed] 搜索Anthropic最新的AI Agent指南
+3. [completed] 搜索Microsoft最新的AI Agent指南
+4. [completed] 对比三家公司AI Agent指南的特点]
+</system-reminder>
